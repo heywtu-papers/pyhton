@@ -1,0 +1,28 @@
+
+#first question
+New = []
+def flat(l):    
+     for i in l:
+        if type(i)==list:
+          flat(i)
+        else:
+            New.append(i)
+
+flat([[1,'a',['cat'],2],[[[3]],'dog'],4,5])
+print(New)
+
+# second question
+
+
+
+reverse = []
+def ters(l): 
+ for i in l:
+        if type(i)==list:
+            reverse.append(list(reversed(i)))
+            
+            
+        
+
+ters([[1, 2], [3, 4], [5, 6, 7]])
+print(list(reversed(reverse)))
