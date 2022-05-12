@@ -15,6 +15,15 @@ h = pd.DataFrame(d)
 result = pd.concat(e,f,g,h)
 print(result)
 
+1-Trafik akışının değişmesi kazaları nasıl etkiler?
+daha iyi
+2-Kaza oranlarını ne artırır?
+Hız,Trafik
+3-Zaman içinde kaza oranlarını tahmin edebilir miyiz?
+Hayır
+4-Kırsal ve kentsel alanlar nasıl farklılaştı?
+Kentsel alanlar daha kazalara meğilli.
+
 
 
 
