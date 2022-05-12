@@ -1,0 +1,67 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+pd.set_option('display.max_colwidth',3000)
+
+a = pd.read_csv('happines/2015.csv')
+b = pd.read_csv('happines/2016.csv')
+c = pd.read_csv('happines/2017.csv')
+d = pd.read_csv('happines/2018.csv')
+e = pd.read_csv('happines/2019.csv')
+
+f = pd.DataFrame(a)
+g = pd.DataFrame(b)
+h = pd.DataFrame(c)
+i = pd.DataFrame(d)
+j = pd.DataFrame(e)
+
+print(f[['Happiness Rank','Country','Happiness Score', 'Economy (GDP per Capita)', 'Family',
+       'Health (Life Expectancy)', 'Freedom', 'Trust (Government Corruption)']])
+ 
+ #Output (2015)
+     Happiness Rank      Country  Happiness Score  Economy (GDP per Capita)   Family  Health (Life Expectancy)  Freedom  Trust (Government Corruption)
+0                 1  Switzerland            7.587                   1.39651  1.34951                   0.94143  0.66557                        0.41978
+1                 2      Iceland            7.561                   1.30232  1.40223                   0.94784  0.62877                        0.14145
+2                 3      Denmark            7.527                   1.32548  1.36058                   0.87464  0.64938                        0.48357
+3                 4       Norway            7.522                   1.45900  1.33095                   0.88521  0.66973                        0.36503
+4                 5       Canada            7.427                   1.32629  1.32261                   0.90563  0.63297                        0.32957
+..              ...          ...              ...                       ...      ...                       ...      ...                            ...
+153             154       Rwanda            3.465                   0.22208  0.77370                   0.42864  0.59201                        0.55191
+154             155        Benin            3.340                   0.28665  0.35386                   0.31910  0.48450                        0.08010
+155             156        Syria            3.006                   0.66320  0.47489                   0.72193  0.15684                        0.18906
+156             157      Burundi            2.905                   0.01530  0.41587                   0.22396  0.11850                        0.10062
+157             158         Togo            2.839                   0.20868  0.13995                   0.28443  0.36453                        0.10731       
+
+print(g[['Happiness Rank','Country','Happiness Score', 'Economy (GDP per Capita)', 'Family',
+       'Health (Life Expectancy)', 'Freedom', 'Trust (Government Corruption)']])
+
+#Output (2016)
+     Happiness Rank      Country  Happiness Score  Economy (GDP per Capita)   Family  Health (Life Expectancy)  Freedom  Trust (Government Corruption)
+0                 1      Denmark            7.526                   1.44178  1.16374                   0.79504  0.57941                        0.44453
+1                 2  Switzerland            7.509                   1.52733  1.14524                   0.86303  0.58557                        0.41203
+2                 3      Iceland            7.501                   1.42666  1.18326                   0.86733  0.56624                        0.14975
+3                 4       Norway            7.498                   1.57744  1.12690                   0.79579  0.59609                        0.35776
+4                 5      Finland            7.413                   1.40598  1.13464                   0.81091  0.57104                        0.41004
+..              ...          ...              ...                       ...      ...                       ...      ...                            ...
+152             153        Benin            3.484                   0.39499  0.10419                   0.21028  0.39747                        0.06681
+153             154  Afghanistan            3.360                   0.38227  0.11037                   0.17344  0.16430                        0.07112
+154             155         Togo            3.303                   0.28123  0.00000                   0.24811  0.34678                        0.11587
+155             156        Syria            3.069                   0.74719  0.14866                   0.62994  0.06912                        0.17233
+156             157      Burundi            2.905                   0.06831  0.23442                   0.15747  0.04320                        0.09419
+
+
+
+1-Freedom,Trust
+2- switzerland 1. => 2.
+   denmark 3. => 1.
+   iceland 2. => 3.
+   Norway 4. => 4.
+   Finland 6. => 5.
+   Canada 5. => 6.
+   Turkey 77. => 79.
+
+3-artmış
+Togo en çok azalmış
+
+
+
+
