@@ -48,7 +48,20 @@ print(g[['Happiness Rank','Country','Happiness Score', 'Economy (GDP per Capita)
 155             156        Syria            3.069                   0.74719  0.14866                   0.62994  0.06912                        0.17233
 156             157      Burundi            2.905                   0.06831  0.23442                   0.15747  0.04320                        0.09419
 
+aa =g.sort_values(by=['Country'])
+bb =f.sort_values(by=['Country'])
 
+cc = (aa['Happiness Score']-bb['Happiness Score'])
+
+
+#print(dd)
+#En yüksek değeri ve en küçük değeri buluyoruz
+#print(cc.sort_values())
+
+
+#indexten bulduğumuz sıradaki ülkeleri buluyoruz.
+print(aa['Country'][94])
+print(aa['Country'][122])
 
 1-Freedom,Trust
 2- switzerland 1. => 2.
@@ -59,8 +72,8 @@ print(g[['Happiness Rank','Country','Happiness Score', 'Economy (GDP per Capita)
    Canada 5. => 6.
    Turkey 77. => 79.
 
-3-artmış
-Togo en çok azalmış
+3-Macedonia  =>  +0.1620000000000008 (en çok artan)
+  Ukrain =>  -0.18299999999999983 (en çok azalan) değişmiş.
 
 
 
