@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 import math
 import tensorflow as tfds
-from DSPG.ilkmodel import print_score
+
 
 df = pd.read_csv('ENB2012_data.csv', low_memory=False)
 def train_cats(df):
@@ -74,6 +74,14 @@ def fix_missing(df,col,name,nan_dict,is_train):
 
             else:
                 df[name]=col.fillna(df[name].median())
+def rmse(x,y):
+    return math.sqrt(((x-y)**2).mean())
+
+def print_score(m):
+    print(f'RMSE of train set{rmse(m.predict(x_train),y_train)}')
+    print(f'RMSE of validation set{rmse(m.predict(x_valid),y_valid)}')
+    print(f'R^2 of train set{(m.score(x_train),y_train)}')
+    print(f'R^2 of validation set{(m.score(x_valid),y_valid)}')
 def split_train_val(df,n):
     return df[:n].copy(),df[n:].copy()
 
@@ -115,7 +123,7 @@ m = RandomForestRegressor(n_estimators=100,n_jobs=-1)
 print_score(m)
      
 
-
+#en yakın 100 dedir.
 
 
 
